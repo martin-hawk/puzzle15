@@ -32,7 +32,7 @@ public class GameService {
 
     public Boolean onMove(String player, int row, int column) {
         Optional<Game> game = this.games.stream().filter(g -> g.getPlayer().getPlayerName().equals(player)).findFirst();
-        Game gameToReturn = null;
+        Game gameToReturn;
 
         if (game.isPresent()) {
             gameToReturn = game.get();
